@@ -1,0 +1,98 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{01 de Dezembro de 2009}
+
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Escreva um programa que leia um número inteiro positivo $n$, 
+em seguida $n$ valores inteiros positivos $v_1,\ldots, v_n$, depois um
+valor inteiro $m$, e imprima a soma dos valores dentre $v_1,\ldots,
+v_n$ que são maiores que $m$.
+
+Os valores devem ser lidos do dispositivo de entrada padrão e podem
+estar separados entre si por um ou mais espaços ou linhas.
+
+Por exemplo, para a entrada:
+
+{\tt \begin{tabbing}
+4 1 2 3 4 2
+\end{tabbing} }
+
+a saída deve ser: {\tt 7} (pois {\tt 3} e {\tt 4} são os valores
+maiores que {\tt 2} dentre os {\tt 4} valores {\tt 1}, {\tt 2}, {\tt
+3}, {\tt 4}).
+
+\item Escreva um programa que leia um valor inteiro positivo $n$,
+em seguida $n$ valores inteiros positivos $v_1,v_2,\ldots, v_n$,
+depois um valor positivo $m$, e imprima o valor resultante do cálculo
+de:
+
+   \[ ((m-1) + v_1) \times ((m-2) + v_2) \times \ldots \times ((m-n) + v_n) \]
+
+Os valores devem ser lidos do dispositivo de entrada padrão e podem
+estar separados entre si por um ou mais espaços ou linhas.
+
+Por exemplo, para a entrada:
+
+{\tt \begin{tabbing}
+4 1 2 3 4 10
+\end{tabbing} }
+
+a saída deve ser: {\tt 1000} (pois esse é o resultado de $(9+1) \times
+(8+2) \times (7+3) \times (6+4)$).
+
+\item Escreva um programa que leia um inteiro positivo $n$, depois
+$n$ valores inteiros $a_1, \ldots, a_n$, e imprima uma mensagem
+indicando se a sequência de valores $a_1, \ldots, a_n$ é crescente (ou
+seja, cada valor $a_{i+1}$ é maior que $a_i$, para $i=1,\ldots,n-1$),
+decrescente (ou seja, cada valor $a_{i+1}$ é menor que $a_i$, para
+$i=1,\ldots,n-1$), constante (todos os valores $a_i$ são iguais entre
+si, para $i=1,\ldots,n$), ou nenhuma dessas opções (nem crescente, nem
+decrescente, nem constante).
+
+Por exemplo, para a entrada: 
+
+{\tt \begin{tabbing}
+4 1 2 3 4
+\end{tabbing} }
+
+a saída deve ser: {\tt \symbol{34}Crescente\symbol{34}} (pois a
+sequência dos {\tt 4} valores {\tt 1},{\tt 2},{\tt 3},{\tt 4} é
+crescente).
+
+Para a entrada: 
+
+{\tt \begin{tabbing}
+4 1 2 3 3
+\end{tabbing} }
+
+a saída deve ser: {\tt \symbol{34}Nem crescente, nem decrescente, nem
+constante\symbol{34}} (pois a sequência dos {\tt 4} valores {\tt
+1},{\tt 2},{\tt 3},{\tt 3} não é crescente, nem decrescente, nem
+constante).
+
+Dica: Use três booleanos {\tt crescente}, {\tt decrescente}, {\tt
+constante}, inicialize-os com {\tt true} e atualize-os ao percorrer (a
+partir do segundo valor da sequência) a sequência de valores
+(armazenada em um arranjo) examinando valores adjacentes da sequência.
+
+\end{enumerate}
+
+\end{document}

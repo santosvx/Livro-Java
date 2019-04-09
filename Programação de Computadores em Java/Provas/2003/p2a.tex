@@ -1,0 +1,129 @@
+\documentclass[brazil]{article}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{24 de Julho de 2003}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\newcommand{\prog}[1]{{\tt \begin{tabbing}
+                        #1 \end{tabbing} }}
+\begin{enumerate}
+
+\item (15 pontos)
+
+\begin{enumerate}
+
+ \item ({\it 5 pontos\/}) Escreva em Java um m\'etodo est\'atico que
+ leia uma cadeia de ca\-rac\-teres e converta essa cadeia de
+ caracteres em um inteiro.  Se a cadeia de caracteres n\~ao
+ representar um valor inteiro, a exce\c{c}\~ao {\it
+ NumberFormatException\/} deve ser propagada pelo m\'etodo ({\em
+ dica\/}: use o m\'etodo {\it parseInt\/} da classe {\it Integer\/},
+ que causa essa exce\c{c}\~ao quando o objeto de tipo {\it String\/}
+ passado como argumento n\~ao representa um valor inteiro). Caso
+ contr\'ario, o valor inteiro lido deve ser retornado (como um valor
+ do tipo {\tt int}).
+
+ \item ({\it 5 pontos\/}) Usando o m\'etodo est\'atico definido acima,
+ escreva um programa que leia um valor inteiro positivo \'{\i}mpar, e
+ imprima um losango como o mostrado abaixo, onde o n\'umero de
+ caracteres {\tt *} na linha do meio do losango \'e igual ao valor
+ lido.
+
+ Se o n\'umero lido n\~ao for um valor inteiro ou n\~ao for um valor
+ inteiro positivo \'{\i}mpar, uma exce\c{c}\~ao deve ser causada e
+ tratada, emitindo-se uma mensagem apropriada --- respectivamente {\em
+ ``Era esperado um valor inteiro\/} e {\em ``Era espe\-ra\-do um valor
+ inteiro positivo {\'{\i}mpar\/}''\/} ---, e a execu\c{c}\~ao do
+ programa deve ser terminada.
+
+ \item ({\it 5 pontos\/}) Modifique o programa (mas n\~ao o m\'etodo
+ est\'atico) anterior para que o programa agora n\~ao termine a
+ execu\c{c}\~ao quando um valor n\~ao esperado for lido, mas leia
+ outro valor, at\'e que o valor digitado seja um valor v\'alido
+ (inteiro positivo \'{\i}mpar), quando s\'o ent\~ao o losango descrito
+ deve ser impresso e a execu\c{c}\~ao do programa deve terminar.
+
+\end{enumerate}
+
+\begin{center}
+\begin{tabular}{c}
+\ *\ \\
+\ ***\ \\
+\ *****\ \\
+\ *******\ \\
+\ *****\ \\
+\ ***\ \\
+\ *\ \\
+\end{tabular}
+\end{center}
+
+
+
+\item ({\em 5 pontos\/}) Considere o trecho de program a seguir:
+
+  \prog{class {\it ArranjoDeInteiros\/}\\ \{ \=int[] {\it a\/};\+\\ \\
+          
+          {\it ArranjoDeInteiros\/} (int $n$)
+          \{ $a$ = new int[$n$]; \}\\ \\
+
+          boolean {\it eq\/} ({\it ArranjoDeInteiros b\/}) \{ \ldots\ \}\-\\
+        \} 
+       }
+
+Escreva uma implementa\c{c}\~ao para o m\'etodo {\it eq\/}, de tal que
+forma que, (para quaisquer {\it a1\/} e {\it a2\/} do tipo {\it
+ArranjoDeInteiros\/}, {\tt {\it a1}.{\it eq\/}({\it a2\/})} compare a
+igualdade dos valores armazenados no arranjo {\it a\/} de {\it a1\/}
+com os valores armazenados no arranjo $a$ de {\it a2\/} e retorne {\tt
+true} se esses valores s\~ao todos iguais e {\tt false} em caso
+contr\'ario. N\~ao esque\c{c}a de considerar os tamanhos dos arranjos
+(i.e.~dois arranjos s\~ao diferentes se t\^em tamanhos diferentes).
+
+\item ({\it 5 pontos\/}) Um armaz\'em trabalha com $n$ mercadorias
+diferentes ($n=100$), identificadas por n\'umeros de 1 a $n$.
+
+Um funcion\'ario desse armaz\'em tem sal\'ario mensal estipulado como
+20\% da receita mensal obtida com as vendas que ele realizou, mais um
+b\^onus igual a 10\% da receita mensal obtida com o produto que teve o
+maior n\'umero de unidades vendidas.
+
+Escreva um programa que leia, para cada mercadoria de 1 a $n$, o
+n\'umero de unidades vendidas em um determinado m\^es por esse
+funcion\'ario e o pre\c{c}o unit\'ario da mercadoria, e imprima o
+sal\'ario do funcion\'ario, nesse m\^es.
+
+Para leitura dos dados, voc\^e pode supor que existam m\'etodos
+est\'aticos {\it readInt\/} e {\it readFloat\/}, que n\~ao t\^em
+par\^ametros e retornam respectivamente um valor do tipo {\tt int} e
+um valor do tipo {\tt float}, lidos do dispositivo de entrada
+padr\~ao. Suponha que esses m\'etodos s\~ao definidos em uma classe
+chamada (digamos) {\it Console\/}.
+
+{\em Dica\/}: na sua implementa\c{c}\~ao, defina uma classe com:
+
+\begin{itemize}
+
+  \item uma vari\'avel inteira (que representa o valor de $n$), um
+  arranjo de inteiros (que ir\'a armazenar para cada mercadoria o
+  n\'umero de unidades vendidas) e um arranjo de pre\c{c}os (que ir\'a
+  armazenar para cada mercadoria o seu pre\c{c}o unit\'ario).
+
+  \item m\'etodo para leitura dos dados e para c\'alculo do sal\'ario
+  do funcion\'ario do armaz\'em.
+
+\end{itemize}
+
+\end{enumerate} 
+
+\end{document}

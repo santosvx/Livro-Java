@@ -1,0 +1,113 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{28 de Abril de 2005}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+Em todas as quest\~oes, voc\^e pode supor a exist\^encia de m\'etodos
+est\'aticos de entrada de valores de tipos básicos, definidos em uma
+classe {\tt EntradaPadr\~ao}. Por exemplo, para ler inteiros, voc\^e
+pode usar {\tt EntradaPadr\~ao.l\^eInteiro()}. Esse método lê um
+inteiro do dispositivo de entrada padrão e retorna o valor lido, de
+tipo {\tt int}. 
+
+\begin{enumerate}
+
+\item (6 pontos) Escreva em Java um programa que leia dois valores inteiros
+positivos $n$ e $m$, que representam respectivamente o número de
+questões de uma prova de múltipla escolha e o número de alunos de uma
+turma. Em seguida, o programa deve ler, para cada um dos $m$ alunos,
+$n$ valores inteiros não-negativos, que representam as respostas de
+cada aluno para cada questão da prova. Depois disso, o programa deve
+ler, para cada uma das questões, um valor inteiro que indica a
+resposta correta de cada questão. O programa deve imprimir, para cada
+aluno, o seu número (de 1 a $m$), e o número de respostas corretas
+dadas por esse aluno. 
+
+\item (7 pontos) Madame Zen \'e uma figura m\'{\i}stica que, al\'em de
+prever o futuro lendo a m\~ao das pessoas, acredita que a frequ\^encia
+de ocorr\^encia dos d\'{\i}igitos na representa\c{c}\~ao decimal dos
+fatoriais de n\'umeros naturais est\'a relacionada ao futuro das
+pessoas. Ela decidiu vender seus servi\c{c}os, fazendo previs\~oes
+sobre a vida de seus fregueses, baseadas nessas freq\"u\^encias, e
+pediu voc\^e para ajud\'a-la, determinando esses valores para ela.
+
+Ela espera usar dados de entrada como os dias da semana, do m\^es e do
+ano como valores de entrada, que s\~ao valores positivos menores ou
+iguais a 365, e voc\^e deve ent\~ao fazer um programa que leia uma
+lista de n\'umeros naturais e imprima, para cada um, o n\'umero de
+ocorr\^encias de cada d\'{\i}gito decimal na representa\c{c}\~ao
+decimal do fatorial desse n\'umero. O programa deve terminar quando o
+n\'umero lido for maior do que 365 ou menor ou igual a zero.
+
+Por exemplo, para a entrada:
+
+\begin{tabular}{l}
+3\\
+8\\
+100\\
+0
+\end{tabular}
+
+o programa deve imprimir uma tabela como a seguinte:
+
+\begin{tabular}{ll}
+3!   & \\
+     & (0)    0    (1)    0    (2)    0    (3)    0    (4)    0\\
+     & (5)    0    (6)    1    (7)    0    (8)    0    (9)    0\\
+8!   & \\
+     & (0)    2    (1)    0    (2)    1    (3)    1    (4)    1\\
+     & (5)    0    (6)    0    (7)    0    (8)    0    (9)    0\\
+100! & \\
+     & (0)   30    (1)   15    (2)   19    (3)   10    (4)   10\\
+     & (5)   14    (6)   19    (7)    7    (8)   14    (9)   20
+\end{tabular}
+
+Os dados devem ser lidos do dispositivo de entrada padr\~ao.
+
+
+\item (7 pontos) Um numeral \'e um {\em pal\'{\i}ndromo\/} se ele \'e  
+o mesmo se lido da esquerda para a direita ou da direita para a
+esquerda (em outras palavras, se ele \'e igual ao seu reverso). Por
+exemplo, 74547 \' um pal\'{\i}ndromo.
+
+Um n\'umero pode ter uma representa\c{c}\~ao que \'e um
+pal\'{\i}ndromo em uma base, e n\~ao \'e em outra. Por exemplo, 17
+n\~ao \'e um pal\'{\i}ndromo, mas 10001 \'e, e ambas representam o
+mesmo n\'umero se as bases s\~ao 10 e 2, respectivamente.
+
+Fa\c{c}a um programa que leia uma lista de numerais na base 10 e
+imprima, para cada $i$ dessa lista, uma das seguintes mensagens,
+conforme apropriado:
+
+  \begin{itemize}
+ 
+     \item ``A representa\c{c}\~ao de $i$ \'e um pal\'{\i}ndromo nas
+     bases: $b_1, \ldots, b_n$'' (onde $b_1, \ldots, b_n$ s\~ao as
+     bases de 2 a 16 nas quais a representa\c{c}\~ao de $i$ \'e um
+     pal\'{\i}ndromo);
+
+     \item ``A representa\c{c}\~ao de $i$ n\~ao \'e um pal\'{\i}ndromo
+     em nenhuma das bases de 2 a 16''.
+
+  \end{itemize}
+
+A leitura dos numerais deve terminar quando o valor lido for igual ou
+menor do que zero.
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{11 de Novembro de 2008}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Escreva um programa que leia um texto --- um valor de tipo {\it
+String\/} --- e imprima o n\'umero de caracteres e o n\'umero de
+linhas deste texto. O n\'umero de linhas \'e igual ao n\'umero de
+caracteres {\tt '$\backslash$n'} presentes no texto.
+
+\item Escreva um programa que leia, repetidamente, valores inteiros,
+at\'e que um valor negativo ou zero seja lido, e imprima, para cada
+valor positivo $n$ lido, uma seq\"u\^encia de $n$ linhas, tais que a
+$i$-\'esima linha cont\'em $i$ caracteres {\tt '*'}.
+
+\item Escreva um programa que leia v\'arios {\em textos\/} --- valores
+de tipo {\it String\/} --- e imprima, para cada texto lido, se ele
+cont\'em alguma {\em palavra\/} pal\'{\i}ndrome e, em caso positivo, a
+primeira palavra pal\'{\i}ndrome encontrada.
+
+Considere uma palavra qualquer valor de tipo {\it String\/} retornado
+pelo m\'etodo {\it next\/}, da classe {\it Scanner\/}.
+
+A leitura deve terminar quando o texto lido (valor retornado por {\it
+next\/}) for nulo.
+
+Uma palavra \'e pal\'{\i}ndrome se ela \'e igual ao seu reverso. Por
+exemplo, {\tt \symbol{34}a\symbol{34}}, {\tt
+\symbol{34}aba\symbol{34}} e {\tt \symbol{34}abcba\symbol{34}} s\~ao
+pal\'{\i}ndromes, enquanto {\tt \symbol{34}ab\symbol{34}} n\~ao \'e.
+
+Voc\^e deve declarar e usar um m\'etodo que testa se um valor de tipo
+{\it String\/} \'e pal\'{\i}ndrome.
+
+\end{enumerate}
+
+\end{document}

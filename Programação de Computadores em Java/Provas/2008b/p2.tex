@@ -1,0 +1,122 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{27 de Novembro de 2008}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Escreva programa para ler seqüência de números inteiros e
+imprimir sua soma.
+
+O programa deve prever a possibibilidade de ocorrência de dados
+incorretos (que não representam números inteiros). Esses dados
+incorretos devem simplesmente ser ignorados (não devem alterar a
+soma).  
+
+A existência de dado incorreto deve ser tratada por um {\em tratador
+de exceção\/}, causada por chamada ao método {\it nextInt\/} definido
+na classe {\it Scanner\/}. Uma chamada a {\it nextInt\/} propaga a
+exceção {\it InputMismatchException\/} caso o valor lido não constitua
+um valor inteiro válido.
+
+Para testar o fim dos dados de entrada, você pode:
+
+  \begin{itemize}
+
+    \item usar o método {\it hasNext\/} da classe {\it Scanner\/}, que
+          retorna {\it false\/} se e somente se n\~ao h\'a mais dados
+          de entrada, ou
+
+    \item tratar a exceção {\it NoSuchElementException\/}, propagada
+    por chamada a {\it nextInt\/} quando não há mais dados de entrada.
+
+  \end{itemize}
+
+\item Escreva um programa que leia uma seqüência de caracteres (valor
+de tipo {\it String\/}) $t$ e imprima uma seqüência de linhas tal que
+cada linha contém dois valores, separados por um espaço, sendo:
+
+     \begin{enumerate}
+
+       \item o primeiro valor um caractere {\bf presente} em $t$
+
+       \item o segundo valor o número de ocorrências desse caractere
+       em $t$
+
+    \end{enumerate}
+
+Use arranjo {\it contChar\/} para armazenar, para cada caractere
+(valor de tipo {\tt char}), o número de ocorrências desse caractere em
+$t$.
+
+O tamanho do arranjo {\it contChar} é dado por {\tt {\it
+Character}.{\it MAX\_VALUE}}.
+
+\item Uma seqüência de números $a_1,\ldots, a_n$ é uma seq-$A$
+se satisfaz:
+
+  \begin{itemize}
+
+    \item $a_{i+1} < a_i$ para $i=1,\ldots,n-1$
+
+    \item para $i=3,\ldots,n$, não existe $1\leq j<i$ tal que $a_i$ é
+    igual à soma de termos $a_1$ até $a_j$.
+
+     Por exemplo, devemos ter: 
+       \[ \begin{array}{l}
+          a_3\not=(a_1+a_2)\\
+          a_4\not=(a_1+a_2+a_3),\: a_4 \not= (a_1+a_2) \\
+          a_5\not=(a_1+a_2+a_3+4),\: a_5 \not= (a_1+a_2+3),\: a_5\not=(a_1+a_2)
+          \end{array}
+       \]
+
+  \end{itemize}
+
+Escreva um programa que:
+
+  \begin{itemize}
+
+    \item Leia várias linhas, cada linha contendo i) o número $n$ de
+    inteiros componentes de uma seqüência de inteiros, e $n$ inteiros
+    componentes da seqüência, cada inteiro na linha separado do
+    seguinte por um ou mais espaços.
+
+    Use a classe {\it Scanner\/} e os métodos {\it hasNext\/} e {\it
+    nextInt\/} definidos nessa classe para, respectivamente, testar o
+    fim dos dados de entrada e obter o próximo inteiro da entrada.
+
+   \item Imprima, para cada seqüência, o número da seqüência --- cada
+   seqüência é identificada por um número, que começa por 1 ---, um
+   espaço e em seguida {\tt \symbol{34}seq-A\symbol{34}} se a
+   seqüência for uma seq-A, ou {\tt \symbol{34}Nao seq-A\symbol{34}}
+   se a seqüência não for uma seq-A.
+
+  \end{itemize}
+
+Use uma variável {\it somas\/} de tipo {\it ArrayList\/} para
+armazenar, para cada número da seqüência, os valores de todas as somas
+de termos anteriores da seqüência.
+
+Sendo {\it somas\/} inicialmente igual a $a_1 + a_2$, para cada
+$a_i$, para $i=3, \ldots, n$, adicione uma nova entrada a {\it
+somas\/}, contendo a soma de $a_i$ com o último valor adicionado a
+{\it somas\/} ($a_1 + a_2 + \ldots + a_{i-1}$).
+
+\end{enumerate}
+
+\end{document}

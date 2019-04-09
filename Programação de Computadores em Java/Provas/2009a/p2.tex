@@ -1,0 +1,82 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{6 de Julho de 2009}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Escreva um programa para determinar o vencedor de uma eleição,
+dados o número de candidatos e os votos.
+
+O primeiro valor da entrada é um inteiro $n$ representando o número de
+candidatos. Cada valor seguinte é um inteiro positivo entre 1 e $n$
+que representa um voto (os candidatos são identificados por inteiros
+positivos entre 1 e $n$).
+
+O final dos dados é indicado por um voto igual a zero. Você pode supor
+que os dados estão corretos (o número de candidatos e cada voto são
+inteiros positivos). Cada inteiro da entrada é separado do seguinte
+por um ou mais espaços ou linhas.
+
+A saída deve conter o número do candidato que venceu (aquele que
+obteve mais votos). Você pode supor que existe apenas um vencedor.
+
+Exemplo: para a entrada:
+
+{\tt 
+\begin{tabular}{l}
+4 1 2 1 4 3 0
+\end{tabular} }
+
+a saída deve ser:
+
+{\tt 1}
+
+\item A paridade de um inteiro $n$ é 0 se o número de bits contidos na
+sua representação binária é par, caso contrário 0.
+
+Por exemplo, 3 na base 2 é igual a 11, portanto tem paridade 0 (há um
+número par de bits na sua representação binária); 4 na base 2 é igual
+a 100, portanto tem paridade 1 (há um número ímpar de bits na sua
+representação binária).
+
+Escreva um programa que leia diversos números positivos, separados por
+espaços ou linhas, e imprima, para cada valor, uma linha que contém a
+sua representação binária e a paridade desse valor.
+
+O final da entrada é indicada por um valor 0 (zero).
+
+Por exemplo: para a entrada:
+
+{\tt \begin{tabular}{l}
+1 2 10 21 0
+\end{tabular}}
+
+a saída deve ser:
+
+{\tt \begin{tabular}{l}
+A paridade de 1 é 1\\
+A paridade de 10 é 1\\
+A paridade de 1010 é 0\\
+A paridade de 10101 é 1
+\end{tabular}}
+
+\end{enumerate}
+
+\end{document}
+

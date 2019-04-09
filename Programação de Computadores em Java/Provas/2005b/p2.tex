@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+
+\title{2$^{\underline{\mbox{a}}}$ Provinha de AEDS1}
+
+\author{Professor: Carlos Camar\~ao}
+
+\date{8 de Novembro de 2005}
+
+\addtolength\textwidth{15mm}
+\addtolength\textheight{2cm}
+\addtolength\topmargin{-2cm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+Um numeral é um {\em palíndromo\/} se, lido da esquerda para a
+direita, é o mesmo que quando lido da direita para a esquerda (em
+outras palavras, se ele \'e igual ao seu reverso). Por exemplo, 74547
+\' um pal\'{\i}ndromo.
+
+\vspace*{\baselineskip}
+Um número pode ter uma representação que é um palíndromo em uma base,
+e não é em outra. Por exemplo, 17 não é um palíndromo, mas 10001 é, e
+ambas representam o mesmo número se as bases são 10 e 2,
+respectivamente.
+
+\vspace*{\baselineskip}
+Faça um programa que leia dois números inteiros positivos $n$ e $m$,
+uma lista de $n$ numerais na base 10 e imprima, para cada numeral $i$
+dessa lista, uma das seguintes mensagens, conforme apropriado:
+
+  \begin{itemize}
+ 
+     \item ``A representa\c{c}\~ao de $i$ \'e um pal\'{\i}ndromo nas
+     bases: $b_1, \ldots, b_k$'' (onde $b_1, \ldots, b_k$ s\~ao as
+     bases de 2 a $m$ nas quais a representa\c{c}\~ao de $i$ \'e um
+     pal\'{\i}ndromo);
+
+     \item ``A representa\c{c}\~ao de $i$ n\~ao \'e um pal\'{\i}ndromo
+     em nenhuma das bases de 2 a $m$''.
+
+  \end{itemize}
+
+Para leitura de $n$ e $m$ e para leitura de cada um dos numerais
+inteiros na base 10 você pode usar (supor que existe definido) um
+método {\tt lêInteiro} (método estático, sem parâmetros, que lê um
+valor inteiro e retorna esse valor).
+
+\end{document}

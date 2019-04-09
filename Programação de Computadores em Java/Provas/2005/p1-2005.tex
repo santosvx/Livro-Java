@@ -1,0 +1,67 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{28 de Abril de 2005}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item (6 pontos) Escreva em Java uma fun\c{c}\~ao (m\'etodo
+est\'atico) que, dado um valor $n$ n\~ao-negativo, calcule o
+somat\'orio dos $n$ primeiros termos da seq\"u\^encia $1, - 2, 4, - 8,
+16, - 32, \ldots$ Se $n$ for igual a 0 (zero), o resultado do
+somat\'orio \'e igual a 0 (zero).
+
+Fa\c{c}a um programa que leia repetidamente um valor inteiro, at\'e
+que o valor lido seja menor que zero, e chame a fun\c{c}\~ao acima
+para cada um dos valores positivos lidos, imprimindo o resultado
+calculado pela fun\c{c}\~ao.
+
+\item (7 pontos) Escreva uma fun\c{c}\~ao (m\'etodo est\'atico) em Java que
+receba um n\'umero inteiro posi\-tivo $n$ como par\^ametro e retorne o
+valor de $sd(n) * md(n)$, onde $sd(n)$ é a soma dos d\'{\i}gitos de
+$n$ e $md(n)$ o maior dígito (da representação decimal) de $n$.
+
+Fa\c{c}a um programa que leia repetidamente um valor inteiro, at\'e
+que o valor lido seja menor ou igual a zero, e chame a fun\c{c}\~ao
+acima para cada um dos valores positivos lidos, imprimindo o resultado
+calculado pela fun\c{c}\~ao.
+
+\item (7 pontos) Suponha que, sob determinadas condi\c{c}\~oes, a
+radioatividade de um determinado material diminui exponencialmente, de
+forma que, a cada instante $t+1$, sua radioatividade passe a ser a
+metade de sua radoatividade no instante $t$. A radioatividade \'e
+medida em alguma unidade de radioatividade (qual, especificamente,
+n\~ao \'e importante para solu\c{c}\~ao da quest\~ao). A unidade de
+tempo também não é importante para solução da questão. Defina uma
+fun\c{c}\~ao (m\'etodo est\'atico) em Java com dois par\^ametros $r1$
+e $r2$, que representam medidas de radio\-a\-tividade, e calcule por
+quantas unidades de tempo esse material, nessas condi\c{c}\~oes,
+iniciando com radioatividade igual a $r1$, ainda tem uma
+radioatividade maior que $r2$ (esse tempo
+\'e igual a zero se $r1 \leq r2$).
+
+Fa\c{c}a um programa que leia repetidamente dois n\'umeros de ponto
+flutuante, um em seguida do outro, at\'e que pelo menos um deles seja
+menor ou igual a zero, e chame a fun\c{c}\~ao acima para cada par de
+valores positivos lidos, imprimindo o resultado calculado pela
+fun\c{c}\~ao. Em cada caso, o primeiro valor lido deve definir o valor
+de $r1$ (radioatividade inicial do material) e o segundo valor lido
+deve definir o valor de $r2$ (limite m\'{\i}nimo de radioatividade).
+
+\end{enumerate}
+
+\end{document}

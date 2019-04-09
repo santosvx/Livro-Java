@@ -1,0 +1,96 @@
+\documentclass[brazil]{article}
+
+\title{1$^{\underline{\mbox{a}}}$ Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Professor: Carlos Camar\~ao}
+
+\date{20 de Maio de 2004}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item (5 pontos) Fa\c{c}a um programa que leia repetidamente 
+cadeias de caracteres, cada uma representando um valor inteiro, chame
+a fun\c{c}\~ao abaixo passando (como par\^ametro) cada um dos valores
+lidos, e imprima o resultado calculado pela fun\c{c}\~ao. Isso deve
+ocorrer a\'e que o valor lido represente um valor inteiro negativo.
+
+A fun\c{c}\~ao (m\'etodo est\'atico) recebe como par\^ametro um valor
+$n$ n\~ao-negativo e retorna o valor dos $n$ primeiros termos da
+s\'erie $\frac{1}{2}, -\frac{2}{5}, \frac{3}{8}, -\frac{4}{11},
+\frac{5}{14}, -\frac{6}{17}, \ldots$ Se $n$ for igual a 0 (zero), o
+resultado \'e igual a 0 (zero).
+
+Nota 1: Voc\^e pode supor que a cadeia de caracteres lida representa
+um valor inteiro (n\~ao precisa tratar o caso em que a cadeia lida
+n\~ao representa um valor inteiro).
+
+\item (5 pontos) Fa\c{c}a um programa que leia repetidamente uma
+cadeia de caracteres que representa um valor inteiro, at\'e que o
+valor lido seja menor ou igual a zero, e chame a fun\c{c}\~ao abaixo
+para cada um dos valores positivos lidos, imprimindo o resultado
+calculado pela fun\c{c}\~ao.
+
+A fun\c{c}\~ao (m\'etodo est\'atico) recebe um n\'umero inteiro
+posi\-tivo $n$ como par\^ametro e retorna como resultado o valor da
+multiplica\c{c}\~ao de $sd$ por $md$, onde $sd$ \'e a soma dos
+d\'{\i}gitos de $n$ e $md$ \'e o valor do maior d\'{\i}gito de $n$.
+
+A mesma nota 1 da quest\~ao anterior \'e v\'alida nesta quest\~ao.
+
+\item (5 pontos) Suponha que, sob determinadas condi\c{c}\~oes, a
+radioatividade de um determinado material radioativo $m$ diminua de
+forma que, a cada instante $t+1$, sua radioatividade passe a ser
+tr\^es quintos do valor da radioatividade no instante $t$. A
+radioatividade \'e medida em alguma unidade de radioatividade (qual,
+especificamente, n\~ao \'e importante para solu\c{c}\~ao da
+quest\~ao); observa\c{c}\~ao an\'aloga vale para a unidade de
+tempo. Defina uma fun\c{c}\~ao (m\'etodo est\'atico) em Java que
+calcule por quantas unidades de tempo o material $m$, iniciando com
+uma determinada radioatividade (digamos igual a $r$), ainda tem uma
+radioatividade maior que um valor limite m\'{\i}nimo de radioatividade
+(digamos igual a $\mathit{min}$). Esse tempo \'e igual a zero se $r
+\leq \mathit{min}$.
+
+Fa\c{c}a um programa que leia repetidamente duas cadeias de caracteres
+que representam n\'umeros de ponto flutuante, at\'e que um deles seja
+menor ou igual a zero, e chame a fun\c{c}\~ao acima para cada par de
+valores positivos lidos, imprimindo o resultado calculado pela
+fun\c{c}\~ao. Em cada caso, o primeiro valor lido deve definir o valor
+de $r$ (radioatividade inicial do material) e o segundo valor lido
+deve definir o valor de $\mathit{min}$ (limite m\'{\i}nimo de
+radioatividade).
+
+Nota 2: Voc\^e pode supor que a cadeia de caracteres lida representa
+um valor de ponto flutuante (n\~ao precisa tratar o caso em que a
+cadeia lida n\~ao representa um valor de ponto flutuante).
+
+\item (5 pontos) Fa\c{c}a um programa para imprimir a seguinte tabela:
+
+ \[ \begin{array}{llllllllll}
+      1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+      2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20\\
+      \ldots\\
+      10 & 20 & 30 & 40 & 50 & 60 & 70 & 80 & 90 & 100
+    \end{array}
+  \]
+
+Considere que um comando de impress\~ao de um valor inteiro sempre
+imprime o n\'umero de caracteres estritamente necess\'ario para
+representa\c{c}\~ao do valor (ou seja, 1 caractere \'e usado para
+impress\~ao dos inteiros de {\tt 1} a {\tt 9}, 2 caracteres para
+impress\~ao dos inteiros de {\tt 10} a {\tt 99} e 3 caracteres para
+impress\~ao do inteiro {\tt 100}). \'E necess\'ario, portanto,
+imprimir espa\c{c}os para controlar o formato da tabela.
+
+\end{enumerate}
+
+\end{document}

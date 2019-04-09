@@ -1,0 +1,101 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Prova resgate}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{15 de Dezembro de 2009}
+
+\setlength{\parindent}{0pt}
+\addtolength{\textwidth}{1cm}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Escreva um programa que leia um número inteiro positivo $n$, 
+em seguida $n$ valores inteiros $v_1,\ldots, v_n$, depois um número
+positivo $m$ e imprima: 
+
+  \[ (v_1 + v_2 + \ldots + v_m) \times (v_{m+1} + v_{m+2} +  \ldots + v_{m+m}) \times \ldots \]
+até que se tenha $m$ ou menos valores restantes, e nesse último passo
+deve-se multiplicar a soma desses $m$ ou menos valores
+restantes.
+
+Os valores devem ser lidos do dispositivo de entrada padrão e podem
+estar separados entre si por um ou mais espaços ou linhas.
+
+Por exemplo, para a entrada:
+
+{\tt \begin{tabbing}
+5 1 2 3 4 5 2
+\end{tabbing} }
+
+a saída deve ser: 105.
+
+Isso ocorre porque $105 = (1+2) \times (3+4) \times 5$.
+
+\item Escreva um programa que leia um texto em português, e imprima
+uma lista que indique, para cada tamanho de palavra, o número de vezes
+que uma palavra desse tamanho ocorre ocorre no texto. 
+
+Tamanhos que nunca ocorrem no texto não devem fazer parte da
+lista. 
+
+Você pode considerar que caracteres de pontuação sempre ocorrem apenas
+no final de uma palavra, e não devem ser considerados como parte da
+palavra.
+
+Por exemplo, para a entrada:
+
+   \[ \text{Hoje estou fazendo uma prova de PC; está legal.} \]
+
+A saída deve ser: 
+
+\begin{tabbing}
+   xxxxx\=\+\kill
+   Tamanho 2: 2 ocorrências\\
+   Tamanho 3: 1 ocorrência\\
+   Tamanho 4: 2 ocorrências\\
+   Tamanho 5: 3 ocorrências\\
+   Tamanho 7: 1 ocorrência
+\end{tabbing}
+
+No exemplo, temos:
+
+\begin{tabbing}
+  xxxxx\=\+\kill
+    As ocorrências de palavras de tamanho 2 são: {\tt de}, {\tt PC} \\
+    A única ocorrência de palavra de tamanho 3 é: {\tt uma} \\
+    As ocorrências de palavras de tamanho 4 são: {\tt Hoje}, {\tt está} \\
+    As ocorrências de palavras de tamanho 5 são: {\tt estou}, {\tt prova}, {\tt legal}\\
+    A única ocorrência de palavra de tamanho 7 é: {\tt fazendo}
+\end{tabbing}
+
+O texto deve ser lido do dispositivo de entrada padrão, usando o
+método {\tt next} da classe {\tt Scanner} para ler uma palavra
+(considere que {\tt next} retorna a próxima palavra do texto,
+incluindo possível caractere de pontuação no final da palavra, e
+avança a posição de leitura para a próxima palavra). Por exemplo, ao
+chamar o método {\tt next} para ler {\tt \symbol{34}PC;\symbol{34}}, a
+cadeia de caracteres {\tt \symbol{34}PC;\symbol{34}} é retornada,
+incluindo o caractere {\tt \symbol{34};\symbol{34}} como último
+caractere da cadeia.
+
+O fim do texto deve ser testado por meio do uso do método {\tt
+hasNext} da classe {\tt Scanner}.
+
+Considere que palavras têm no máximo 30 caracteres. 
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,94 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+
+\title{``Prova Resgate'' de Programa\c{c}\~ao de Computadores}
+
+\author{Professor: Carlos Camar\~ao}
+
+\date{9 de Novembro de 2004}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+ 
+\item (5 pontos) Defina uma fun\c{c}\~ao {\it somat\/} que recebe como
+parâmetro um número inteiro positivo $n$ e retorna um valor aproximado
+do somatório:
+
+  \[ \frac{1}{1}  + (-\frac{2}{4}) + \frac{3}{9} + (-\frac{4}{16}) + 
+     \frac{5}{25} + \ldots \] 
+usando $n$ parcelas.
+
+Escreva um programa para teste dessa função. O programa deve ler um
+valor inteiro $n$, terminar a execução se $n$ for menor ou igual a
+zero e, caso contrário, chamar a função {\it somat\/} passando $n$
+como argumento, imprimir o valor retornado e repetir o processo (de
+leitura seguida da chamada a {\it somat\/} e impressão do valor
+retornado).
+
+Dica: Não se esqueça de evitar a realização de divisão entre dois
+números inteiros (de tipo {\tt int}). Lembre-se que, para {\tt num} e
+{\tt denom} do tipo {\tt int} e, por exemplo, {\tt num = 2} e {\tt
+denom=4}, o valor de {\tt num/denom} é igual a zero.
+
+\item (5 pontos) Escreva defini\c{c}\~oes para as fun\c{c}\~oes {\it
+soma\/} e {\it somaR\/}, tais que, ao receber como argumentos dois
+n\'u\-me\-ros inteiros {\it a\/} e {\it b\/}, retornem o valor
+\mbox{\tt {\it a\/} + {\it b\/}}, mas suponha que as
+opera\c{c}\~oes de adicionar e de subtrair mais de uma unidade n\~ao
+s\~ao dispon\'{\i}veis (i.e.~ou seja, você deve basear a sua definição
+no uso das opera\c{c}\~oes mais simples de incrementar 1 e decrementar
+1). {\it soma\/} deve ser baseada no uso de um comando de
+repeti\c{c}\~ao, e {\it somaR\/} deve ser baseada em chamadas
+recursivas.
+
+Escreva um programa para teste dessas fun\c{c}\~oes. O programa deve
+ler dois valores inteiros, terminar a execução se ambos forem iguais a
+zero e, caso contrário, chamar e imprimir o resultado de {\it soma\/}
+e {\it somaR\/} para os valores lidos, e repetir o processo (de
+leitura seguida do cálculo e impressão da soma dos valores lidos).
+
+\item (5 pontos) Defina uma fun\c{c}\~ao {\it decBin\/} que receba um
+n\'umero inteiro n\~ao-negativo como argumento e retorne uma cadeia de
+ca\-rac\-te\-res que \'e igual \`a representa\c{c}\~ao desse n\'umero
+em nota\c{c}\~ao bin\'aria.
+
+Por exemplo, ao receber o n\'umero inteiro {\tt 8}, a fun\c{c}\~ao
+deve retornar \ttfamily "1000"\normalfont.
+
+Defina também uma fun\c{c}\~ao {\it binDec\/} que receba como
+argumento uma cadeia de ca\-rac\-teres que representa um n\'umero
+inteiro n\~ao-negativo em nota\c{c}\~ao bin\'aria e retorne o valor
+inteiro (de tipo {\tt int}) correspondente, em nota\c{c}\~ao decimal.
+
+Por exemplo, ao receber a cadeia de caracteres \ttfamily
+"1000"\normalfont, a fun\c{c}\~ao deve retornar o valor {\tt
+8}.
+
+Escreva um programa para teste dessas fun\c{c}\~oes. O programa deve
+ler um valor inteiro $n$, terminar a execução se esse valor for menor
+que zero e, caso contrário, chamar e imprimir o resultado de {\it
+binDec(decBin(n))\/}, e repetir o processo (de leitura de $n$ seguida
+de cálculo e impressão de {\it binDec(decBin(n))\/}, se $n\geq 0$).
+
+Não use a operação de exponenciação para definição de {\it binDec\/}!
+Escreva {\it binDec\/} realizando a operação de conversão da cadeia de
+bits da esquerda (dígitos mais significativos) para a direita (dígitos
+menos significativos); use para isso uma variável $n$ que representa o
+resultado da conversão, e uma variável $i$ para percorrer os índices
+da cadeia de bits; para cada novo dígito encontrado, defina $n$ como a
+multiplicação do valor (anterior) de $n$ por 2 somado ao valor inteiro
+correspondente ao bit na posição $i$, e incremente $i$; repita até que
+$i$ seja maior ou igual ao tamanho da cadeia.
+
+\end{enumerate}
+
+\end{document}

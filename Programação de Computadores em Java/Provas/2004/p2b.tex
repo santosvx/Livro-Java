@@ -1,0 +1,103 @@
+\documentstyle{article}
+
+\title{2$^{\underline{\mbox{a}}}$ Prova de Algoritmos e Estruturas de Dados I}
+
+\pagestyle{empty}	
+
+\author{Professor: Carlos Camar\~ao}
+\date{27 de Janeiro de 2004}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{enumerate}
+
+\item (3 pontos) Escreva um programa que leia um valor inteiro
+positivo $n$, calcule o valor de $\sum_{i=1}^n (-i+1)/(i*i)$, e imprima
+esse valor. 
+
+O programa (isto \'e, o m\'etodo de leitura) pode supor que a cadeia
+de caracteres lida representa um n\'umero inteiro positivo (em outras
+palavras, ele n\~ao precisa testar se a cadeia de caracteres lida
+representa de fato um n\'umero inteiro positivo).  
+
+\item (2 pontos) Escreva outra vers\~ao para o seu programa acima, que
+difere da anterior da seguinte maneira. Se o seu programa usou um
+comando de repeti\c{c}\~ao, use agora um m\'etodo recursivo, e
+vice-versa (se o seu programa usou um m\'etodo recursivo, use agora um
+m\'etodo n\~ao recursivo, contendo um comando de repeti\c{c}\~ao para
+implementa\c{c}\~ao do somat\'orio).
+
+\item (5 pontos) Fa\c{c}a um programa para ler um valor inteiro
+positivo $n$, e em seguida $n$ seq\"u\^encias de valores inteiros
+positivos, cada uma delas terminada por um valor inteiro negativo ou
+nulo, e imprimir a soma dos maiores valores de cada uma das
+seq\"u\^encias.
+
+Por exemplo, se os valores digitados pelo usu\'ario forem:
+  
+  \[ \begin{array}{l}
+        3    \\
+        1    \\
+        10   \\
+        0    \\
+        2    \\
+        20   \\
+        10   \\
+        -1   \\
+        3    \\ 
+        30   \\
+        5    \\
+        1    \\
+        0    
+      \end{array} \]
+o programa deve imprimir 50 como resultado (50 = 10+20+30).
+
+O programa pode supor, em cada situa\c{c}\~ao de entrada de dados, que
+o valor lido \'o esperado (por exemplo n\~ao \'e fornecida como
+entrada nenhuma cadeia de caracteres que n\~ao representa um n\'umero
+inteiro). Por exemplo, n\~ao \'e necess\'ario testar se o primeiro
+valor lido (de $n$) representa de fato um valor positivo.
+
+\item (5 pontos) Escreva outra vers\~ao para o seu programa acima, que
+difere da anterior da seguinte maneira. Se o seu programa declarou e
+usou um arranjo, fa\c{c}a uma vers\~ao que n\~ao declara e nem usa um
+arranjo. E vice-versa (se o seu programa n\~ao declarou e usou um
+arranjo, fa\c{c}a uma vers\~ao que declara e usa um arranjo).
+
+\item (5 pontos) Fa\c{c}a um programa que leia dois n\'umeros inteiros
+positivos, $n$ e $m$, e $n$ seq\"u\^encias de $m$ valores inteiros
+positivos, cada uma dessas seq\"u\^encias terminada por um valor
+inteiro negativo ou zero, e imprima, para $i$ variando de 1 a $m$, a
+soma dos $i$-\'esimos inteiros de cada uma das $n$ sequ\^encias.
+
+Por exemplo, se os valores fornecidos como entrada forem:
+  
+  \[ \begin{array}{l}
+        3    \\
+        2    \\
+        10   \\
+        5    \\
+        0    \\
+        2    \\
+        20   \\
+        -1   \\
+        3    \\
+        30   \\
+        0
+      \end{array} \]
+o programa deve imprimir 70 como resultado: 
+  70 = (10+5) + (2+20) + (3+30) 
+
+O programa pode super que cada um dos valores fornecidos como entrada
+representa um valor esperado (por exemplo, n\~ao \'e preciso testar se
+\'e fornecida como entrada uma cadeia de caracteres que n\~ao
+representa um n\'umero inteiro, ou se o n\'umero de inteiros positivos
+de cada seq\"u\^encia n\~ao \'e o mesmo).
+
+\end{enumerate}
+
+\end{document}
+

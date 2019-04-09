@@ -1,0 +1,61 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{10 de Novembro de 2008}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Escreva um programa que leia, repetidamente, valores inteiros
+positivos e imprima, para cada inteiro $n$ lido, o valor m\'edio dos
+divisores {\em pr\'oprios\/} de $n$ --- calculada como a soma dos
+divisores pr\'oprios de $n$ dividida pelo n\'umero de divisores
+pr\'oprios de $n$).
+
+A leitura deve terminar quando um valor negativo ou zero for lido.
+
+Um divisor pr\'oprio de $n$ \'e um divisor de $n$ diferente de $1$ e
+de $n$.
+
+A soma e o n\'umero de divisores devem ser inteiros. O resultado (a
+m\'edia) deve ser um n\'umero de ponto flutuante. N\~ao use divis\~ao
+entre dois inteiros para c\'alculo da m\'edia; converta a soma ou o
+n\'umero de divisores de modo que a divis\~ao feita para c\'alculo da
+m\'edia seja uma divis\~ao de n\'umeros de ponto flutuante.
+
+\item Escreva um programa que leia repetidamente um valor inteiro,
+at\'e que o valor lido seja menor que zero, e chame o m\'etodo
+est\'atico {\it somaPot2PosNeg\/}, descrito abaixo, para cada um dos
+valores positivos lidos, imprimindo o resultado calculado pelo
+m\'etodo.
+
+O m\'etodo est\'atico {\it somaPot2PosNeg\/} calcula, para um dado um
+valor $n$ n\~ao-negativo, o somat\'orio dos $n$ primeiros termos da
+seq\"u\^encia $1, - 2, 4, - 8, 16, - 32, \ldots$ Se $n$ for igual a
+zero, o resultado do somat\'orio \'e igual a zero.
+
+\item Escreva um programa para ler um n\'umero positivo $n$ e imprimir
+a soma de todos os m\'ultiplos de 3 ou 5 que s\~ao menores que $n$.
+
+Por exemplo, se for lido 10 o programa deve imprimir 23 --- uma vez
+que a soma de todos os m\'ultiplos de 3 ou 5 que s\~ao menores que 10
+\'e igual a (3+5+6+9)=23.
+
+
+\end{enumerate}
+
+\end{document}

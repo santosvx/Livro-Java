@@ -1,0 +1,137 @@
+\documentstyle{article}
+
+\title{Exampe Especial\\ Algoritmos e Estruturas de Dados I}
+
+\pagestyle{empty}	
+
+\addtolength\textwidth{15mm}
+\addtolength\textheight{2cm}
+\addtolength\topmargin{-2cm}
+\setlength{\parindent}{0pt}
+
+\author{Prof.: Carlos Camar\~ao}
+\date{5 de Janeiro de 2001}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+Em todas as quest\~oes, voc\^e pode supor a exist\^encia de m\'etodos
+est\'aticos de entrada e sa\'{\i}da de valores de tipos básicos,
+definidos em uma classe {\tt EntradaPadr\~ao}. Por exemplo, para ler
+inteiros, voc\^e pode usar {\tt EntradaPadr\~ao.l\^eInteiro()}.
+
+\begin{enumerate}
+
+\item Escreva um programa que leia um valor inteiro positivo $n$, 
+calcule o valor dado por $\sum_{i=1}^n (-(i+1)/(i*i))$, e imprima esse
+valor.  Decomponha o seu programa em tr\^es partes, cada uma delas
+implementada por um m\'etodo: leitura, c\'alculo do valor desejado a
+partir do valor lido, e impress\~ao do valor calculado.
+
+O m\'etodo de leitura deve ler uma cadeia de caracteres e causar uma
+exce\c{c}\~ao se essa cadeia n\~ao representar um n\'umero inteiro
+positivo. Se a exce\c{c}\~ao ocorrer, ela deve ser tratada no programa
+principal. Esse tratamento deve apenas emitir uma mensagem de erro
+apropriada, e em seguida a execu\c{c}\~ao do programa deve ser
+interrompida.
+
+\item Fa\c{c}a um programa para ler um valor inteiro positivo $n$, e
+em seguida $n$ seq\"u\^encias de valores inteiros positivos, cada uma
+delas terminada por um valor inteiro negativo ou nulo, e imprimir a
+soma dos maiores valores de cada uma das seq\"u\^encias.
+
+Por exemplo, se os valores digitados pelo usu\'ario forem:
+  
+  \[ \begin{array}{l}
+        5    \\
+        2    \\
+        10   \\
+        0    \\
+        2    \\
+        18   \\
+        -1   \\
+        3    \\ 
+        30   \\
+        5    \\
+        1    \\
+        0    
+      \end{array} \]
+
+o programa deve imprimir como resultado o valor 76 (pois 76 = (5+2+10) +
+(2+18) + (3+30+5+1)).
+
+Em cada situa\c{c}\~ao de entrada de dados, se um valor n\~ao esperado
+for fornecido com entrada (por exemplo uma cadeia de caracteres que
+n\~ao representa um n\'umero inteiro), uma exce\c{c}\~ao deve ser
+causada, e o processo de entrada de dados pelo usu\'ario do programa
+deve recome\c{c}ar, a partir do in\'{\i}cio (isto \'e, a partir da
+leitura de $n$).
+
+Dica 1: o m\'etodo {\it parseInt\/} causa uma exce\c{c}\~ao ({\it
+NumberFormatException\/}) se a cadeia de caracteres fornecida como
+argumento n\~ao representar um n\'umero inteiro.
+
+Dica 2: N\~ao esque\c{c}a de testar se o primeiro valor lido
+\'e um valor positivo, e causar uma exce\c{c}\~ao em caso contr\'ario. 
+Voc\^e pode causar e tratar apenas a exce\c{c}\~ao {\it Exception\/},
+pois a exce\c{c}\~ao {\it NumberFormatException\/} \'e um objeto da
+classe {\it Exception\/}, e portanto ser\'a tamb\'em tratada por um
+tratador que trata (recebe como argumento) uma exce\c{c}\~ao {\it
+NumberFormatException\/}.
+
+\item Escreva outra vers\~ao para o seu programa acima, que difere da
+anterior da seguinte maneira. Se o seu programa declarou e usou um
+arranjo, fa\c{c}a uma vers\~ao que n\~ao declara e nem usa um
+arranjo. E vice-versa (se o seu programa n\~ao declarou e usou um
+arranjo, fa\c{c}a uma vers\~ao que declara e usa um arranjo).
+
+\item (7 pontos) Uma opera\c{c}\~ao de {\em contra\c{c}\~ao de uma
+lista\/} \'e definida como sendo tal que, dados um inteiro positivo
+$i$, chamado de {\it \'{\i}ndice\/} da contra\c{c}\~ao, e uma lista de
+$n$ n\'umeros inteiros $x = [a_1, a_2, \ldots, a_i,
+\ldots, a_n]$, onde sup\~oe-se $i < n$, retorna como resultado a
+lista $[a_1, \ldots, a_{i-1}, a_i-a_{i+1}, a_{i+2},\ldots, a_n]$. 
+
+Aplicando $n-1$ contra\c{c}\~oes a uma lista de $n$ inteiros quaisquer
+obt\'em-se uma lista com um \'unico inteiro, chamado de {\em valor
+alvo\/}. Por exemplo, se chamarmos de {\it con\/} a opera\c{c}\~ao de
+contra\c{c}\~ao e por $con(x,i)$ a opera\c{c}\~ao de aplicar {\it
+con\/} a uma lista {\it x} e a um \'{\i}ndice $i$, temos:
+
+  \[ \begin{array}{rcl}
+       con([12,10,4,3,5],2) & = & [12,6,3,5] \\
+       con([12,6,3,5],3)    & = & [12,6,-2]\\
+       con([12,6,-2],2)     & = & [12,8]\\
+       con([12,8],1)        & = & [4]
+     \end{array}
+  \]
+
+Fa\c{c}a um programa que:
+
+\begin{itemize}
+
+\item leia um valor inteiro positivo $n$ (o n\'umero de inteiros da
+seq\"u\^encia original), $n$ valores inteiros de uma seq\"u\^encia
+$a_1, \ldots, a_n$ e, em seguida, uma seq\"u\^encia de $n-1$ valores
+que indicam os \'{\i}ndices de constra\c{c}\~oes, 
+
+\item realize contra\c{c}\~oes consecutivamente como no exemplo
+acima, e
+
+\item imprima o valor alvo $x$. 
+
+\end{itemize}
+
+Se n\~ao existir valor alvo (i.e.~se a entrada estiver de alguma forma
+incorreta), o programa deve emitir uma mensagem de erro apropriada.
+
+Dica: Use um contador para indicar o n\'umero de valores v\'alidos
+para a seq\"u\^encia, inicialmente igual a $n$ (tamanho da
+seq\"u\^encia original) e decrementado de 1 a cada contra\c{c}\~ao.
+
+\end{enumerate}
+
+\end{document}
+

@@ -1,0 +1,76 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{20 de Maio de 2009}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Escreva um programa que leia um inteiro positivo $n$ e imprima o
+valor do somatório seguinte com $n$ parcelas:
+
+    \[ \frac{1}{2} - \frac{2}{5} + \frac{3}{10} - \frac{4}{17} +
+\frac{5}{26} - \ldots \]
+
+Obs. 1: A primeira parcela é $\frac{1}{2}$ e cada parcela incrementa o
+numerador da parcela anterior de 1, e é tal que o denominador é igual
+ao produto do numerador por ele próprio mais 1.
+
+Obs. 2: Não esqueça de trocar o sinal de cada parcela para cálculo do
+somatório.
+
+\item Escreva programa para ler repetidamente um número inteiro
+positivo $n$ e imprimir o seguinte, com $n$ linhas:
+
+    \begin{center}
+     \begin{tabular}{l}
+      1\\
+      2 3 \\
+      3 4 5 \\
+      4 5 6 7\\
+      5 6 7 8 9\\ 
+      \ldots
+     \end{tabular}
+     \end{center}
+
+Ou seja, para cada $n$ lido, o programa deve imprimir, para
+$i=1,\ldots,n$, uma linha com $i$ inteiros começando de $i$ e sendo
+cada inteiro igual ao anterior na linha mais 1 e separado do anterior
+por um espaço.
+
+O programa deve terminar quando o valor $n$ lido for menor ou igual a
+zero.
+
+\item Escreva um programa que leia palavra por palavra de um texto,
+e imprima o total de: i) letras, ii) dígitos e iii) caracteres de
+pontuação encontrados nessas palavras.
+
+Cada palavra contém apenas letras, dígitos ou caracteres de pontuação
+(como por exemplo vírgula e ponto). 
+
+Os caracteres delimitadores de palavras --- como {\tt '$\backslash$n'}
+(terminador de linha), {\tt ' '} (espaço) e {\tt '$\backslash$t'}
+(tab) --- devem ser ignorados (isso é feito automaticamente pelo
+método {\it next\/} da classe {\it Scanner\/}).
+
+O fim do texto deve ser testado usando o método {\it hasNext\/} da
+classe {\it Scanner\/} e cada palavra deve ser lida usando o método
+{\it next\/} dessa classe.
+
+\end{enumerate}
+
+\end{document}

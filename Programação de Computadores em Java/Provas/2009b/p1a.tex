@@ -1,0 +1,92 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{15 de Outubro de 2009}
+
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Escreva um programa que leia, repetidamente, do dispositivo de
+entrada padrão, valores, separados por um ou mais espaços ou linhas,
+de CPF e renda mensal, em reais, de contribuintes e imprima, para cada
+contribuinte (i.e.~cada cpf), o imposto de renda a ser pago, calculado
+conforme a seguinte regra:
+  
+  \[ \text{\begin{tabular}{ll}
+       Renda mensal até R\$1164,00 & Isento\\
+       Renda mensal maior que R\$1164,00 e menor que R\$2326,00 & 15\% de imposto de renda\\
+       Renda mensal superior a R\$2326,00 & 27,5\% de imposto de renda
+     \end{tabular} }
+   \]
+
+A impressão deve conter cada CPF, um espaço, e o imposto de renda a
+ser pago.
+
+A leitura deve terminar quando um valor de CPF menor ou igual a zero
+for lido.
+
+Considere que os dados de entrada sempre estão corretos e que cada
+valor de renda mensal consiste em um valor válido de tipo {\tt float}.
+
+\item Escreva um programa que leia um inteiro positivo $n$ e imprima o
+valor do somatório seguinte, com $n$ parcelas:
+
+    \[ \frac{1}{2} - \frac{4}{3} + \frac{16}{5} - \frac{64}{8} +
+\frac{256}{12} - \ldots \]
+
+Obs. 1: Não se esqueça: se o sinal de uma parcela é positivo, o sinal
+da parcela seguinte é negativo e vice-versa.
+
+Obs. 2: Não use divisão inteira (entre numerador e denominador de cada
+parcela).
+
+Obs.3: O numerador de uma parcela, seguinte a outra, pode ser obtido
+multiplicando o numerador da parcela anterior por 4. O denominador de
+uma parcela, seguinte a outra, pode ser obtido somando um certo valor
+(que varia de parcela a parcela) ao denominador da parcela anterior.
+
+\item Escreva programa para ler repetidamente um número inteiro
+positivo $n$ e imprimir o seguinte, com $n$ linhas:
+
+    \begin{center}
+     \begin{tabular}{l}
+      1\\
+      3 4 \\
+      6 8 10 \\
+      10 13 16 19\\
+      15 19 23 27 31\\ 
+      21 26 31 36 41 46\\
+      \ldots
+     \end{tabular}
+     \end{center}
+
+O programa deve terminar quando o valor $n$ lido for menor ou igual a
+zero.
+
+Dica 1: O primeiro número de cada linha seguinte a outra pode ser
+obtido a partir do primeiro número da linha anterior somando um certo
+valor.
+
+Dica 2: O número de valores em cada linha aumenta de 1 em 1.
+
+Dica 3: O valor seguinte a outro em uma linha pode ser obtido a partir
+do valor anterior somando um certo valor.
+
+\end{enumerate}
+
+\end{document}

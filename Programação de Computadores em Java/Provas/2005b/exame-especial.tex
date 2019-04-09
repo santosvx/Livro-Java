@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+
+\title{2$^{\underline{\mbox{a}}}$ Provinha de AEDS1}
+
+\author{Professor: Carlos Camar\~ao}
+
+\date{8 de Novembro de 2005}
+
+\addtolength\textwidth{15mm}
+\addtolength\textheight{2cm}
+\addtolength\topmargin{-2cm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+{\bf 1.} (6 pontos) Escreva um programa que leia um valor inteiro
+positivo $n$, calcule e imprima o valor dado por $1 - \sum_{i=1}^n
+\frac{1}{3} - \frac{4}{7} + \frac{7}{11} - \frac{10}{15} +
+\frac{13}{19} - \ldots$. 
+
+O programa deve tratar a exce\c{c}\~ao que ocorre quando a cadeia de
+caracteres lida não representa um n\'umero inteiro, ou não representa
+um número inteiro positivo, informando o ocorrido ao usuário com uma
+mensagem apropriada e realizando a operação de leitura novamente.
+
+A operação de divisão não pode ser uma ``divisão inteira'' (não pode
+ter como parâmetros dois números inteiros), mas sim uma divisão de
+números de ponto flutuante (i.e.~deve ser realizada depois de
+converter pelo menos um dos números inteiros para um número de ponto
+flutuante).
+
+\vspace*{\baselineskip}
+
+{\bf 2.} (6 pontos) Um número é {\em primo\/} se ele não tem nenhum
+divisor {\em próprio\/} (um divisor próprio é um divisor maior que 1 e
+menor que o próprio número).  Escreva um programa que leia um número
+inteiro positivo e imprima uma mensagem dizendo se o número lido é um
+número primo ou não.
+
+O seu programa deve definir e chamar um método para determinar se um
+número é primo ou não. Esse método deve testar, para cada valor de 1 a
+$n/2$, se o resto da divisão de $n$ por esse valor é igual ou
+diferente de zero.
+
+Nota: o teste até $n/2$ (e não até $n$) é suficiente porque certamente
+não existe nenhum divisor próprio de $n$ maior do que $n/2$.
+
+\vspace*{\baselineskip}
+
+{\bf 3.} (8 pontos) O {\em crivo de Eratóstenes\/} é um algoritmo para
+geração de todos os números primos menores ou iguais a um dado número
+(que pode então ser usado também, é claro, para testar se um dado
+número é ou não primo). Ele funciona como a seguir.
+
+Para gerar todos os números primos entre $2$ e $n$, construa
+inicialmente uma estrutura de dados --- o {\em crivo\/} --- em que
+todos os números de 2 a $n$ estão contidos (você pode usar um arranjo
+de booleanos, onde {\tt true} significa ``está contido'' e {\tt false}
+significa ``foi retirado'').
+
+Tome o primeiro valor contido no crivo (ou seja, o primeiro valor não
+retirado), inicialmente o 2. Marque-o como primo (você pode usar, por
+simplicidade, um outro arranjo de booleanos, onde inicialmente todos
+os valores são iguais a {\tt false}, e onde ``marcar como primo''
+siginifica ``atribuir valor {\tt true}'').
+
+Retire do crivo todos os valores múltiplos desse valor (marque-os como
+``retirados''), incluindo ele próprio. Pegue agora o próximo valor
+contido no crivo e repita a operação (marque-o como primo e retire do
+crivo todos os seus múltiplos). Faça isso repetidamente, até que não
+haja mais valores a serem considerados (i.e. até que não haja mais
+valores contidos no crivo). Por exemplo, se $n=10$, temos:
+
+  \begin{tabular}{lll}
+    iteração & valores contidos no crivo & {\footnotesize 
+                                           valor selecionado (a ser marcado
+                                          como primo e tal que}\\ 
+             &                             & {\footnotesize seus múltiplos 
+                                             serão retirados do crivo)}\\
+             & 2 3 4 5 6 7 8 9 10          & 2 \\
+       1     &   3   5   7   9             & 3 \\
+       2     &       5   7                 & 5 \\
+       3     &       7                     & 7\\
+  \end{tabular}
+  
+Escreva um programa que leia um valor inteiro positivo $n$ e imprima
+todos os valores primos, de 2 a $n$, usando o algoritmo do crivo de
+Eratóstenes descrito acima.
+
+Reescreva o método definido na questão anterior para testar se um dado
+número é primo ou não, de maneira a usar o algoritmo do crivo de
+Eratóstenes (i.e. gerando os primos a partir de 2, até o número dado).
+
+\end{document}

@@ -1,0 +1,113 @@
+\documentstyle{article}
+
+\title{Exampe Especial\\ Algoritmos e Estruturas de Dados I}
+
+\pagestyle{empty}	
+
+\author{Prof.: Carlos Camar\~ao}
+\date{4 de Setembro de 2003}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{enumerate}
+
+\item Escreva um programa que leia um valor inteiro positivo $n$, 
+calcule o valor de $\sum_{i=1}^n (-i/(i*i))$, e imprima esse valor.
+Decomponha o seu programa em tr\^es partes, cada uma delas
+implementada por um m\'etodo: leitura, c\'alculo do valor desejado a a
+partir do valor lido, e impress\~ao do valor calculado.
+
+O programa (isto \'e, o m\'etodo de leitura) deve ler uma cadeia de
+caracteres e causar uma exce\c{c}\~ao se essa cadeia n\~ao representar
+um n\'umero inteiro positivo. Nesse caso, a exce\c{c}\~ao deve ser
+tratada no programa principal, e esse tratamento deve apenas emitir
+uma mensagem de erro apropriada, e em seguida a execu\c{c}\~ao do
+programa deve ser terminada.
+
+\item Fa\c{c}a um programa para ler um valor inteiro positivo $n$, e
+em seguida $n$ seq\"u\^encias de valores inteiros positivos, cada uma
+delas terminada por um valor inteiro negativo ou nulo, e imprimir a
+soma dos maiores valores de cada uma das seq\"u\^encias. 
+
+Por exemplo, se os valores digitados pelo usu\'ario forem:
+  
+  \[ \begin{array}{l}
+        3    \\
+        1    \\
+        10   \\
+        0    \\
+        2    \\
+        20   \\
+        10   \\
+        -1   \\
+        3    \\ 
+        30   \\
+        5    \\
+        1    \\
+        0    
+      \end{array} \]
+o programa deve imprimir 50 como resultado (50 = 10+20+30).
+
+Em cada situa\c{c}\~ao de entrada de dados, se um valor n\~ao esperado
+for fornecido com entrada (por exemplo uma cadeia de caracteres que
+n\~ao representa um n\'umero inteiro), uma exce\c{c}\~ao deve ser
+causada, e o processo de entrada de dados pelo usu\'ario do programa
+deve recome\c{c}ar, a partir do in\'{\i}cio (isto \'e, a partir da
+leitura de $n$). 
+
+Dica 2: o m\'etodo {\it parseInt\/} causa uma exce\c{c}\~ao ({\it
+NumberFormatException\/}) se a cadeia de caracteres fornecida como
+argumento n\~ao representar um n\'umero inteiro.
+
+Dica 3: N\~ao esque\c{c}a de testar se o primeiro valor lido (de $n$)
+\'e um valor positivo, e causar uma exce\c{c}\~ao em caso contr\'ario. 
+Voc\^e pode causar e tratar apenas a exce\c{c}\~ao {\it Exception\/},
+pois a exce\c{c}\~ao {\it NumberFormatException\/} \'e um objeto da
+classe {\it Exception\/}, e portanto ser\'a tamb\'em tratada por um
+tratador que trata (recebe como argumento) uma exce\c{c}\~ao {\it
+NumberFormatException\/}.
+
+\item Escreva outra vers\~ao para o seu programa acima, que difere da
+anterior da seguinte maneira. Se o seu programa declarou e usou um
+arranjo, fa\c{c}a uma vers\~ao que n\~ao declara e nem usa um
+arranjo. E vice-versa (se o seu programa n\~ao declarou e usou um
+arranjo, fa\c{c}a uma vers\~ao que declara e usa um arranjo).
+
+\item Fa\c{c}a um programa que leia dois n\'umeros inteiros positivos,
+$n$ e $m$, e $n$ seq\"u\^encias de $m$ valores inteiros positivos,
+cada uma dessas seq\"u\^encias terminada por um valor inteiro negativo
+ou zero, e imprima, para $i$ variando de 1 a $m$, a soma dos
+$i$-\'esimos inteiros de cada uma das $n$ sequ\^encias. 
+
+Por exemplo, se os valores fornecidos como entrada forem:
+  
+  \[ \begin{array}{l}
+        3    \\
+        2    \\
+        10   \\
+        5    \\
+        0    \\
+        2    \\
+        20   \\
+        -1   \\
+        3    \\
+        30   \\
+        0
+      \end{array} \]
+o programa deve imprimir 70 como resultado: 
+  70 = (10+2+3) + (5+20+30) 
+
+Se um valor n\~ao esperado for fornecido com entrada (por exemplo uma
+cadeia de caracteres que n\~ao representa um n\'umero inteiro ou se o
+n\'umero de inteiros positivos de cada seq\"u\^encia n\~ao for o
+mesmo), uma exce\c{c}\~ao deve ser causada, e o processo de entrada de
+dados pelo usu\'ario do programa deve recome\c{c}ar, a partir do
+in\'{\i}cio.
+
+\end{enumerate}
+
+\end{document}
+

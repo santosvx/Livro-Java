@@ -1,0 +1,79 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Prova resgate}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{15 de Dezembro de 2009}
+
+\setlength{\parindent}{0pt}
+\addtolength{\textwidth}{1cm}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Escreva um programa que leia um número inteiro positivo $n$, 
+em seguida $n$ valores inteiros $v_1,\ldots, v_n$, depois um número
+positivo $m$ e imprima: 
+
+  \[ (v_1\times v_2\times v_m) + (v_{m+1}\times v_{m+2} \times \ldots \times v_{m+m}) + \ldots \]
+até que se tenha $m$ ou menos valores restantes, e nesse último passo
+deve-se somar a multiplicação desses $m$ ou menos valores
+restantes.
+
+Os valores devem ser lidos do dispositivo de entrada padrão e podem
+estar separados entre si por um ou mais espaços ou linhas.
+
+Por exemplo, para a entrada:
+
+{\tt \begin{tabbing}
+5 1 2 3 4 5 2
+\end{tabbing} }
+
+a saída deve ser: 19
+
+Isso ocorre porque $19 = (1\times 2) + (3\times 4) + 5$.
+
+\item Escreva um programa para determinar o vencedor de uma eleição,
+dados o número de candidatos e os votos.
+
+O primeiro valor da entrada é um inteiro $n$ representando o número de
+candidatos. Cada valor seguinte é um inteiro positivo entre 1 e $n$
+que representa um voto (os candidatos são identificados por inteiros
+positivos entre 1 e $n$).
+
+O final dos dados é indicado por um voto igual a zero. Você pode supor
+que os dados estão corretos (o número de candidatos e cada voto são
+inteiros positivos). Cada inteiro da entrada é separado do seguinte
+por um ou mais espaços ou linhas.
+
+A saída deve conter o número do candidato que venceu (aquele que
+obteve mais votos). Você pode supor que existe apenas um vencedor.
+
+Exemplo: para a entrada:
+
+{\tt 
+\begin{tabular}{l}
+4 1 2 1 4 3 0
+\end{tabular} }
+
+a saída deve ser:
+
+{\tt 1}
+
+Isso ocorre porque o candidato {\tt 1} foi o candidato que recebeu
+mais votos (2 votos).
+
+\end{enumerate}
+
+\end{document}

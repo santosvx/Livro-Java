@@ -1,0 +1,99 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+
+\title{1$^{\underline{\mbox{a}}}$ Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Professor: Carlos Camar\~ao}
+
+\date{19 de Outubro de 2004}
+
+\addtolength\textwidth{15mm}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+ 
+\item (5 pontos) Foi feita uma pesquisa entre os habitantes de uma
+região, na qual foram coletados dados de idade, sexo (M/F) e
+salário. Faça um programa para ler os dados e imprimir:
+  
+\begin{enumerate}
+
+\item a média de salário do grupo, e dos homens e das mulheres do grupo;
+
+\item a maior e menor idade do grupo;
+
+\item a quantidade de homens com 60 anos ou mais com salário maior que
+R\$1000,00.
+
+\end{enumerate}
+
+Suponha que os dados são lidos do dispositivo de entrada padrão, e que
+existem métodos {\tt EntradaPadrão.lêInteiro()} e {\tt
+EntradaPadrão.lêPontoFlutuante()} que lêem e retornam um valor inteiro
+e um valor de ponto flutuante, respectivamtente, desse
+dispositivo. Mais precisamente, você pode supor que existe uma classe
+{\tt EntradaPadrão} na qual são definidos métodos com ``assinatura''
+{\tt public static int lêInteiro()} e {\tt public static float
+lêPontoFlutuante}. Esses métodos podem ser chamados usando,
+respectivamente, {\tt EntradaPadrão.lêInteiro()} e \\ {\tt
+EntradaPadrão.lêPontoFlutuante()}.
+
+Você pode supor a existência dessas funções também nas questões a
+seguir.
+
+Dica: Use Integer.MAX\_VALUE como valor inicial da menor altura.
+
+\item (5 pontos) Escreva em Java uma fun\c{c}\~ao (m\'etodo
+est\'atico) que, dado um valor $n$ n\~ao-negativo, calcule o
+somat\'orio dos $n$ primeiros termos da seq\"u\^encia $(1-2.0/3),\:
+(4+5.0/6,)\: (7-8.0/9),\: (10+11.0/12),\: (13-14.0/15), \ldots$ Se $n$
+for igual a 0 (zero), o resultado do somat\'orio \'e igual a 0 (zero).
+
+Fa\c{c}a um programa que leia repetidamente um valor inteiro, at\'e
+que o valor lido seja menor que zero, e chame a fun\c{c}\~ao acima
+para cada um dos valores não-negativos lidos, imprimindo o resultado
+calculado pela fun\c{c}\~ao.
+
+\item (5 pontos) Escreva um programa para imprimir tri\^angulos como o
+mostrado abai\-xo.
+
+\begin{center}
+  \begin{tabular}{c}
+      * \\
+     ***\\
+    *****\\
+   *******\\
+  *********\\
+ ***********\\
+*************
+  \end{tabular}
+\end{center}
+
+O programa deve ler valores inteiros positivos (um a um) e imprimir,
+para cada valor lido $n$, um triângulo com n\'umero de linhas igual a
+$n$.  Se o valor for menor ou igual a zero, a execução do programa
+deve terminar.
+
+\item (5 pontos) Escreva um programa que para imprimir o valor de:
+
+  \[ S_n = \sum_{i=0}^n \frac{1}{i!} \]
+
+O seu programa deve ler valores inteiros não-negativos e imprimir,
+para cada valor lido $n$, o valor de $S_n$. Se $n$ for menor que zero,
+a execução do programa deve terminar.
+
+Não use uma função para calcular o fatorial de $i$, para cada termo
+($\frac{1}{i!}$). Em vez disso, calcule o fatorial com base no
+fatorial do termo anterior, ou seja, use o fato de que $i! = (i-1)!
+\times i$ (e $0! = 1$).
+
+\end{enumerate} 
+
+\end{document}

@@ -1,0 +1,113 @@
+\documentclass[brazil]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Prova de Programa\c{c}\~ao de Computadores}
+
+\author{Prof.: Carlos Camar\~ao}
+
+\date{01 de Dezembro de 2009}
+
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Escreva um programa que leia um número inteiro positivo $n$, 
+em seguida $n$ valores inteiros positivos $v_1,\ldots, v_n$, depois um
+valor inteiros $m$ e um valor inteiro positivo $k$, e imprima todos os
+valores dentre $v_1,\ldots, v_n$ que são maiores que $m$.
+
+Os valores devem ser lidos do dispositivo de entrada padrão e podem
+estar separados entre si por um ou mais espaços ou linhas.
+
+A saída deve imprimir os valores separados por um espaço, e contendo
+no máximo $k$ valores por linha: a cada $k$ valores impressos deve ser
+impresso um caractere de terminação de linha.
+
+Por exemplo, para a entrada:
+
+{\tt \begin{tabbing}
+10 1 3 5 7 9 6 7 8 9 10 5 2
+\end{tabbing} }
+
+a saída deve ser:
+
+{\tt \begin{tabbing}
+7 9\\
+6 7\\
+8 9\\
+10
+\end{tabbing} }
+
+({\tt 7},{\tt 9},{\tt 6},{\tt 7},{\tt 8},{\tt 9},{\tt 10} são os
+valores maiores que {\tt 5} dentre os {\tt 10} valores lidos).
+
+\item Escreva um programa que leia um valor inteiro positivo $n$,
+em seguida $n$ valores inteiros positivos $v_1,v_2,\ldots, v_n$,
+depois um valor positivo $m$, e imprima o valor resultante do cálculo
+de:
+
+   \[ ((m-1) \times v_1) + ((m-2) \times v_2) + \ldots + ((m-n)\times v_n) \]
+
+Os valores devem ser lidos do dispositivo de entrada padrão e podem
+estar separados entre si por um ou mais espaços ou linhas.
+
+Por exemplo, para a entrada:
+
+{\tt \begin{tabbing}
+4 1 2 3 4 10
+\end{tabbing} }
+
+a saída deve ser: {\tt 70} (pois esse é o resultado de $9\times 1 + 8
+\times 2 + 7 \times 3 + 6 \times 4$).
+
+\item Escreva um programa que leia um inteiro positivo $n$, depois
+$n$ valores inteiros $a_1, \ldots, a_n$, e imprima uma mensagem
+indicando se a sequência de valores $a_1, \ldots, a_n$ é
+não-decrescente (ou seja, cada valor $a_{i+1}$ é maior ou igual a
+$a_i$, para $i=1,\ldots,n-1$), não-crescente (ou seja, cada valor
+$a_{i+1}$ é menor ou igual a $a_i$, para $i=1,\ldots,n-1$), constante
+(todos os valores $a_i$ são iguais entre si, para $i=1,\ldots,n$), ou
+nenhuma dessas opções (nem não-decrescente, nem não-decrescente, nem
+constante).
+
+Por exemplo, para a entrada: 
+
+{\tt \begin{tabbing}
+4 1 2 3 3
+\end{tabbing} }
+
+a saída deve ser: {\tt \symbol{34}Não-decrescente\symbol{34}} (pois a
+sequência dos {\tt 4} valores {\tt 1},{\tt 2},{\tt 3},{\tt 3} é
+não-decrescente).
+
+Para a entrada: 
+
+{\tt \begin{tabbing}
+4 1 2 5 3
+\end{tabbing} }
+
+a saída deve ser: {\tt \symbol{34}Nem não-decrescente, nem
+não-crescente, nem constante\symbol{34}} (pois a sequência dos {\tt 4}
+valores {\tt 1},{\tt 2},{\tt 5},{\tt 3} não é não-decrescente, nem
+não-decrescente, nem constante).
+
+Dica: Use três booleanos {\tt naoCrescente}, {\tt naoDecrescente},
+{\tt constante}, inicialize-os com {\tt true} e atualize-os ao
+percorrer (a partir do segundo valor da sequência) a sequência de
+valores (armazenada em um arranjo) examinando valores adjacentes da
+sequência.
+
+
+\end{enumerate}
+
+\end{document}
